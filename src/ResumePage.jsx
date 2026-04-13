@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ITEMS = [
-  { id: "i", badge: "I", title: "EDUCATION", subtitle: "University / Coursework", rank: 3 },
-  { id: "ii", badge: "II", title: "SKILLS", subtitle: "Frontend / Design / UI", rank: 4 },
-  { id: "iii", badge: "III", title: "PROJECTS", subtitle: "Featured Work", rank: 5 },
-  { id: "iv", badge: "IV", title: "EXPERIENCE", subtitle: "Internships / Roles", rank: 2 },
+  { id: "i",   badge: "I",   title: "EXPERIENCE", subtitle: "Internships / Roles",    rank: 5 },
+  { id: "ii",  badge: "II",  title: "SKILLS",     subtitle: "Frontend / Design / UI", rank: 4 },
+  { id: "iii", badge: "III", title: "PROJECTS",   subtitle: "Featured Work",          rank: 5 },
+  { id: "iv",  badge: "IV",  title: "EDUCATION",  subtitle: "University / Coursework",rank: 3 },
 ];
 
-const EDUCATION_ROWS = [
-  { index: "01", title: "General Education", status: "Complete" },
-  { index: "02", title: "Computer Science Core", status: "In Progress" },
-  { index: "03", title: "Elective Track", status: "Queued" },
-  { index: "04", title: "Capstone Prep", status: "Pending" },
+const EXPERIENCE_ROWS = [
+  { index: "01", title: "Software Engineer Intern — Acme Corp",  status: "2024" },
+  { index: "02", title: "Frontend Developer Intern — StartupXYZ", status: "2023" },
+  { index: "03", title: "UI/UX Design Intern — DesignLab",        status: "2022" },
+  { index: "04", title: "Teaching Assistant — CS Dept",           status: "2023" },
 ];
 
 export default function ResumePage({ src }) {
@@ -408,12 +408,12 @@ export default function ResumePage({ src }) {
           <div className="resume-detail-panel">
             <div className="resume-detail-top">
               <div className="resume-detail-top-index">01</div>
-              <div className="resume-detail-top-title">EDUCATION LOG</div>
-              <div className="resume-detail-top-progress">7/5</div>
+              <div className="resume-detail-top-title">WORK LOG</div>
+              <div className="resume-detail-top-progress">4/4</div>
             </div>
 
             <div className="resume-detail-list">
-              {EDUCATION_ROWS.map((row) => (
+              {EXPERIENCE_ROWS.map((row) => (
                 <div className="resume-detail-row" key={row.index}>
                   <div className="resume-detail-row-index">{row.index}</div>
                   <div className="resume-detail-row-title">{row.title}</div>
@@ -425,9 +425,9 @@ export default function ResumePage({ src }) {
             <div className="resume-detail-bottom">
               <div className="resume-detail-bottom-title">DETAILS</div>
               <div className="resume-detail-bullets">
-                <div className="resume-detail-bullet">- Maintain progress across required classes and supporting work.</div>
-                <div className="resume-detail-bullet">- Track portfolio-ready projects tied to coursework and labs.</div>
-                <div className="resume-detail-bullet">- Keep materials prepared for internships, research, and review.</div>
+                <div className="resume-detail-bullet">- Built React dashboards and internal tooling for engineering teams.</div>
+                <div className="resume-detail-bullet">- Designed and shipped responsive UI components used in production.</div>
+                <div className="resume-detail-bullet">- Led weekly lab sessions for 30+ students in intro CS courses.</div>
               </div>
             </div>
           </div>

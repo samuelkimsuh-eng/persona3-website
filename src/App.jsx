@@ -11,10 +11,17 @@ import './App.css'
 
 function MenuScreen() {
   const navigate = useNavigate()
+  const handleNavigate = (page) => {
+    if (page === 'github') {
+      window.open('https://github.com/samuelkimsuh-eng', '_blank')
+    } else {
+      navigate(`/${page}`)
+    }
+  }
   return (
     <div id="menu-screen">
       <video src={mainVideo} autoPlay loop muted playsInline />
-      <P3Menu onNavigate={(page) => navigate(`/${page}`)} />
+      <P3Menu onNavigate={handleNavigate} />
     </div>
   )
 }
